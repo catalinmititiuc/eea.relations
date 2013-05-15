@@ -1,0 +1,18 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  i18n_domain="eea">
+
+  <browser:page
+    name="settings.html"
+    for="eea.relations.interfaces.IRelationsTool"
+    class=".settings.ControlPanel"
+    permission="cmf.ManagePortal"
+    />
+
+  <adapter
+    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    provides="eea.relations.controlpanel.interfaces.IRelationsSettings"
+    factory=".settings.ControlPanelAdapter" />
+
+</configure>

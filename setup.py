@@ -41,6 +41,7 @@ setup(name=NAME,
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
+          'BeautifulSoup',
           'pydot',
           'eea.facetednavigation',
           'Products.TALESField',

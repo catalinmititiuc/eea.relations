@@ -11,7 +11,7 @@
 
     <genericsetup:upgradeDepends
       title="Import steps with changes from eea.relations profile: browserlayer"
-      import_steps="browserlayer"
+      import_steps="browserlayer typeinfo"
       />
 
   </genericsetup:upgradeSteps>
