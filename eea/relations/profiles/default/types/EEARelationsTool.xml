@@ -27,7 +27,7 @@
   <permission value="View"/>
  </action>
  <action title="Settings" action_id="settings" category="object"
-    condition_expr="python:True" url_expr="string:$object_url/settings.html"
+    condition_expr="python:True" url_expr="string:$object_url/settings"
     visible="True">
   <permission value="Modify portal content"/>
  </action>

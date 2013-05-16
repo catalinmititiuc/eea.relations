@@ -36,66 +36,27 @@ class ControlPanelAdapter(SchemaAdapterBase):
         return self._settings
 
     @property
-    def token(self):
-        """ Get token
+    def autoRelations(self):
+        """ Enable auto-relations
         """
-        name = u"token"
+        name = u"autoRelations"
         return getattr(self.settings, name, IRelationsSettings[name].default)
 
-    @token.setter
-    def token(self, value):
-        """ Set token
+    @autoRelations.setter
+    def autoRelations(self, value):
+        """ Enable / disable auto-relations
         """
-        self.settings.token = value
+        self.settings.autoRelations = value
 
     @property
-    def autoTagging(self):
-        """ Enable auto-tagging
-        """
-        name = u"autoTagging"
-        return getattr(self.settings, name, IRelationsSettings[name].default)
-
-    @autoTagging.setter
-    def autoTagging(self, value):
-        """ Enable / disable auto-tagging
-        """
-        self.settings.autoTagging = value
-
-    @property
-    def autoTaggingFields(self):
+    def autoRelationsFields(self):
         """ Fields
         """
-        name = u"autoTaggingFields"
+        name = u"autoRelationsFields"
         return getattr(self.settings, name, IRelationsSettings[name].default)
 
-    @autoTaggingFields.setter
-    def autoTaggingFields(self, value):
-        """ Update autoTaggingFields
+    @autoRelationsFields.setter
+    def autoRelationsFields(self, value):
+        """ Update autoRelationsFields
         """
-        self.settings.autoTaggingFields = value
-
-    @property
-    def autoTaggingLink(self):
-        """ Link
-        """
-        name = u"autoTaggingLink"
-        return getattr(self.settings, name, IIRelationsSettingsySettings[name].default)
-
-    @autoTaggingLink.setter
-    def autoTaggingLink(self, value):
-        """ Update autoTaggingLink
-        """
-        self.settings.autoTaggingLink = value
-
-    @property
-    def autoTaggingBlackList(self):
-        """ Blacklist
-        """
-        name = u"autoTaggingBlackList"
-        return getattr(self.settings, name, IRelationsSettings[name].default)
-
-    @autoTaggingBlackList.setter
-    def autoTaggingBlackList(self, value):
-        """ Update blacklist
-        """
-        self.settings.autoTaggingBlackList = value
+        self.settings.autoRelationsFields = value

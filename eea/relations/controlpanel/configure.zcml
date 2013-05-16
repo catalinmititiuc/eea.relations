@@ -4,14 +4,14 @@
   i18n_domain="eea">
 
   <browser:page
-    name="settings.html"
+    name="settings"
     for="eea.relations.interfaces.IRelationsTool"
     class=".settings.ControlPanel"
     permission="cmf.ManagePortal"
     />
 
   <adapter
-    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    for="eea.relations.interfaces.IRelationsTool"
     provides="eea.relations.controlpanel.interfaces.IRelationsSettings"
     factory=".settings.ControlPanelAdapter" />
 
